@@ -1,3 +1,4 @@
+import ProgressBar from './bar.jsx';
 
 const LevelProgress = ({ xp }) => {
     // Calculate the level based on XP (starting at level 1)
@@ -12,12 +13,8 @@ const LevelProgress = ({ xp }) => {
             <p className="text-white">XP: {xp}</p>
 
             {/* Progress Bar */}
-            <div className="w-full bg-gray-600 rounded-full mt-4">
-                <div
-                    className="h-2 rounded-full bg-green-500"
-                    style={{ width: `${progress}%` }}
-                ></div>
-            </div>
+            <ProgressBar progress={progress} />
+
             <p className="mt-2 text-sm text-white">
                 {xpAtCurrentLevel} XP to next level
             </p>

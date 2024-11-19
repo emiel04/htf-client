@@ -4,6 +4,7 @@ import NavigationBar from "./NavigationBar.jsx";
 import "./index.css";
 import ChallengesPage from "./ChallengesPage.jsx";
 
+
 function App() {
     return (
         <Router>

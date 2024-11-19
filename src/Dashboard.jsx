@@ -1,9 +1,36 @@
 import ChallengeCardDashboard from "./ChallengeCardDashboard.jsx";
-import {useState} from "react";
+import React, {useState} from "react";
 import LevelProgress from "./components/LevelComponent.jsx";
 import PieChart from "./components/CompletedChart.jsx";
+import ProgressBar from "./components/bar.jsx";
+
+
 
 function Dashboard() {
+
+    const [leadboardUsers, setLeadboardUsers] = useState([
+        {
+            name: "Bobby",
+            xp: 350,
+        },
+        {
+            name: "Alice",
+            xp: 500,
+        },
+        {
+            name: "Charlie",
+            xp: 400,
+        },
+        {
+            name: "Dave",
+            xp: 300,
+        },
+        {
+            name: "Eve",
+            xp: 200,
+        },
+    ]);
+
     const [name, setName] = useState("Bobby")
     const [completed, setCompleted] = useState(60);
     const [max] = useState(100);
@@ -44,6 +71,10 @@ function Dashboard() {
             <div className="shadow-xl bg-neutral rounded-xl">
                 <div>
                     <h2 className="text-white font-bold text-2xl">Leaderboard</h2>
+                    <ul className="text-white">
+                        {leadboardUsers.map((user, index) => {
+                        })}
+                    </ul>
                 </div>
             </div>
         </div>
