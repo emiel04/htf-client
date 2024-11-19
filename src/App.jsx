@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import NavigationBar from "./NavigationBar.jsx";
 import "./index.css";
 import ChallengesPage from "./ChallengesPage.jsx";
+import Challenge from "./Challenge.jsx";
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Dashboard/>}/>
                     <Route path="/challenges" element={<ChallengesPage/>}/>
-                    <Route path="/contact" element={<div>Contact Page</div>}/>
+                    <Route path="/challenge/:id" element={<Challenge/>} />
                 </Routes>
             </div>
         </Router>
