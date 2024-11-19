@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import LevelProgress from "./components/LevelComponent.jsx";
 import PieChart from "./components/CompletedChart.jsx";
 import ProgressBar from "./components/bar.jsx";
+import LeaderboardCardDashboard from "./components/leaderboardcard.jsx";
 
 
 
@@ -57,8 +58,9 @@ function Dashboard() {
                 <PieChart completed={completed} max={max} />
                 <PieChart completed={completed} max={max} />
             </div>
-            <div className="bg-neutral shadow-xl rounded-xl overflow-hidden">
-                <ul className="h-full p-5 flex gap-5 flex-col overflow-y-auto">
+            <div className="bg-neutral shadow-xl rounded-xl overflow-hidden p-5">
+                <h2 className="text-white font-bold text-2xl">My completed challenges</h2>
+                <ul className="h-full flex gap-5 flex-col overflow-y-auto">
                     <ChallengeCardDashboard/>
                     <ChallengeCardDashboard/>
                     <ChallengeCardDashboard/>
@@ -68,17 +70,22 @@ function Dashboard() {
                 </ul>
             </div>
 
-            <div className="shadow-xl bg-neutral rounded-xl">
-                <div>
-                    <h2 className="text-white font-bold text-2xl">Leaderboard</h2>
-                    <ul className="text-white">
-                        {leadboardUsers.map((user, index) => {
-                        })}
-                    </ul>
-                </div>
-            </div>
+            <div className="bg-neutral shadow-xl rounded-xl overflow-hidden p-5">
+                <h2 className="text-white font-bold text-2xl text-center">Leaderboard</h2>
+                <ul className="h-full flex gap-5 flex-col overflow-y-auto items-center">
+                    {leadboardUsers.map((user, index) => (
+                        <LeaderboardCardDashboard
+                            key={index}
+                            name={user.name}
+                            xp={user.xp}
+                            i={index + 1}
+                        />
+                    ))}
+                </ul>
         </div>
-    );
+</div>
+)
+    ;
 }
 
 export default Dashboard;
