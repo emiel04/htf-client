@@ -43,7 +43,7 @@ function Dashboard() {
 
             <div className="shadow-xl bg-neutral rounded-xl">
                 <div>
-
+                    <h2 className="text-white font-bold text-2xl">Leaderboard</h2>
                 </div>
             </div>
         </div>
