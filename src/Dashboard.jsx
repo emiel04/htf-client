@@ -38,8 +38,8 @@ function Dashboard() {
 
     return (
         <div className="h-[calc(100vh-7.1rem)] grid grid-rows-[0.5fr_1fr] grid-cols-2 gap-4">
-            <div className="bg-neutral shadow-xl rounded-xl flex">
-                <div className="avatar flex">
+            <div className="bg-neutral shadow-xl rounded-xl flex p-5 gap-3">
+                <div className="avatar flex items-center">
                     <div className="h-48 rounded-full">
                         <img
                             src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
